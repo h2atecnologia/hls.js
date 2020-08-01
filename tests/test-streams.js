@@ -35,15 +35,10 @@ function createTestStreamWithConfig (target, config) {
 }
 
 module.exports = {
-  bbb: createTestStreamWithConfig({
+  bbb: {
     url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
     description: 'Big Buck Bunny - adaptive qualities'
   },
-  {
-    // try to workaround test failing because of slow seek on Chrome/Win10
-    nudgeMaxRetry: 5
-  }
-  ),
   fdr: {
     url: 'https://cdn.jwplayer.com/manifests/pZxWPRg4.m3u8',
     description: 'FDR - CDN packaged, 4s segments, 180p - 1080p',
